@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white-500: #f8f8f2;
+  --yellow-300: #d3a526;
+  --yellow-500: #f7c94b;
+  --grey-300: #343746;
+
+  --bg-color-primary: #282a36;
+  --bg-color-secondary: #21222c;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+a {
+  font-size: 1.6rem;
+}
+
+body {
+  color: var(--white-500);
+  background-color: var(--bg-color-primary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--yellow-500);
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--yellow-300);
+}
