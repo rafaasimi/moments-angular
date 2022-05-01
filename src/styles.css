@@ -17,7 +17,7 @@
 html,
 body {
   font-size: 62.5%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 p,
@@ -41,4 +41,55 @@ a {
 
 a:hover {
   color: var(--yellow-300);
+}
+
+/* Form Styles */
+form {
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 1.6rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.6rem;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.6rem;
+  color: var(--grey-300);
+  font-size: 1.6rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+input[type="file"] {
+  color: var(--white-500);
+  padding: 0;
+}
+
+input[type="submit"] {
+  font-weight: bold;
+  background: var(--yellow-500);
+  color: var(--grey-300);
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+  background: var(--yellow-300);
 }
