@@ -8,10 +8,21 @@
   --white-500: #f8f8f2;
   --yellow-300: #d3a526;
   --yellow-500: #f7c94b;
+  --red-500: #f20b36;
   --grey-300: #343746;
 
   --bg-color-primary: #282a36;
   --bg-color-secondary: #21222c;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 html,
@@ -70,6 +81,16 @@ form {
   font-size: 1.6rem;
 }
 
+.form-group input:focus,
+.form-group textarea:focus {
+  outline-color: var(--yellow-500);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border: 2px solid var(--red-500);
+}
+
 .form-group textarea {
   resize: vertical;
 }
@@ -92,4 +113,11 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background: var(--yellow-300);
+}
+
+.validation-error p {
+  color: var(--red-500);
+  margin-top: 0.8rem;
+  border-left: 2px solid var(--red-500);
+  padding-left: 0.8rem;
 }
