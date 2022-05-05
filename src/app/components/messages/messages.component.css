@@ -1,0 +1,41 @@
+.message {
+  position: fixed;
+  top: 3rem;
+  width: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  background: var(--yellow-500);
+  border: 3px solid var(--yellow-300);
+  padding: 1.6rem;
+
+  display: flex;
+  flex-direction: column;
+  color: var(--grey-300);
+}
+
+.message-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+
+.message-header button {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background: var(--bg-color-primary);
+  border: none;
+  color: var(--white-500);
+}
+
+.message-header button:hover {
+  background: var(--bg-color-secondary);
+}
+
+.message p {
+    font-size: 1.4rem;
+    word-break: break-word;
+}
