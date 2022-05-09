@@ -1,1 +1,9 @@
-<p>home works!</p>
+<div class="home-container">
+    <h1>See some shared moments:</h1>
+
+    <!-- Form de busca -->
+
+    <div *ngFor="let moment of filteredMoments">
+        <h2>{{moment.title}}</h2>
+    </div>
+</div>
