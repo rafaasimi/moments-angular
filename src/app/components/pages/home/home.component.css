@@ -1,8 +1,10 @@
 .home-container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .home-container h1 {
@@ -47,4 +49,28 @@
   color: var(--grey-300);
   padding: 0.8rem 1.6rem;
   border-radius: 0.8rem;
+}
+
+.search-container {
+  margin-bottom: 2.4rem;
+  width: 100%;
+  display: flex;
+}
+
+.search-container form {
+  width: 30%;
+  position: relative;
+}
+
+.search-container fa-icon {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  font-size: 1.6rem;
+  color: var(--grey-300);
+}
+
+.search-container input {
+  padding: 0.5rem;
+  width: 100%;
 }
