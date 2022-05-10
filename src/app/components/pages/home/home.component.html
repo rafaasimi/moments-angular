@@ -2,8 +2,20 @@
     <h1>See some shared moments:</h1>
 
     <!-- Form de busca -->
-
-    <div *ngFor="let moment of filteredMoments">
-        <h2>{{moment.title}}</h2>
+    <div *ngIf="allMoments.length > 0; else noMoments">
+        <div class="moments-container">
+            <div class="moment" *ngFor="let moment of filteredMoments">
+                <img src="{{baseApiUrl}}uploads/{{moment.image}}" alt="{{moment.title}}">
+                <h3>{{moment.title}}</h3>
+                <p class="date">Created at: {{moment.created_at}}</p>
+                <p>Comments: {{moment.comments!.length}}</p>
+                <p><a routerLink="moments/{{moment.id}}">Details</a></p>
+            </div>
+        </div>
     </div>
+
+    <ng-template #noMoments>
+        <h1>There are no moments to be displayed.</h1>
+    </ng-template>
+
 </div>
