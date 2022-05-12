@@ -27,7 +27,7 @@ export class MomentComponent implements OnInit {
     private messagesService: MessagesService,
     private router: Router
   ) {}
-
+ 
   ngOnInit(): void {
     // Recebe ID da URL
     const id = Number(this.route.snapshot.paramMap.get('id'));
