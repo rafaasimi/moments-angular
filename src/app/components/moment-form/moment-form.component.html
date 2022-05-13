@@ -1,4 +1,5 @@
 <form (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm">
+    <input type="hidden" formControlName="id">
     <div class="form-group">
         <label for="title">Title:</label>
         <input type="text" name="title" placeholder="Title of the moment" formControlName="title" required [ngClass]="{'error': title.invalid && formDir.submitted}">
