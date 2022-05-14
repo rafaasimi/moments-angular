@@ -24,10 +24,6 @@
                 <p class="comment">{{comment.text}}</p>
                 <p class="author"><span>by: {{comment.username}}</span></p>
             </div>
-            <div class="comment-container">
-                <p class="comment">Texto do comentario</p>
-                <p class="author"><span>by: Rafael</span></p>
-            </div>
         </div>
         <ng-template #noComments>
             <p>There are no comments to show.</p>
@@ -35,15 +31,21 @@
     </div>
     <div class="comment-form">
         <h2>What did you think of this moment?:</h2>
-        <form>
+        <form [formGroup]="commentFormGroup" #formDir="ngForm" (ngSubmit)="onSubmit(formDir)">
             <div class="form-group">
                 <label for="text">Comment:</label>
-                <textarea placeholder="Leave your comment here..." required></textarea>
+                <textarea formControlName="text" placeholder="Leave your comment here..." required></textarea>
+                <div *ngIf="text.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="text.errors?.['required']">The text is mandatory</p>
+                </div>
             </div>
 
             <div class="form-group">
                 <label for="username">Name:</label>
-                <input type="text" placeholder="Type your name..." required>
+                <input formControlName="username" type="text" placeholder="Type your name..." required>
+                <div *ngIf="username.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="username.errors?.['required']">The name is mandatory</p>
+                </div>
             </div>
             <input type="submit" value="Send">
         </form>
