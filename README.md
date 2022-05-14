@@ -51,6 +51,9 @@ ng serve
 
 
 ## 🖼️ Layout
+<img src=".github/home.png">
+<img src=".github/edit-moment.png">
+<img src=".github/new-moment.png">
 
 
 ## 📝 Licença
