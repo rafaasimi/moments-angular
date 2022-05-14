@@ -9,16 +9,16 @@
     </div>
 
     <!-- Form de busca -->
-    <div *ngIf="allMoments.length > 0; else noMoments">
-        <div class="moments-container">
-            <div class="moment" *ngFor="let moment of filteredMoments">
-                <img src="{{baseApiUrl}}uploads/{{moment.image}}" alt="{{moment.title}}">
-                <h3>{{moment.title}}</h3>
-                <p class="date">Created at: {{moment.created_at}}</p>
-                <p>Comments: {{moment.comments!.length}}</p>
-                <p><a routerLink="moments/{{moment.id}}">Details</a></p>
-            </div>
+    <div *ngIf="allMoments.length > 0; else noMoments" class="moments-container">
+
+        <div class="moment" *ngFor="let moment of filteredMoments">
+            <img src="{{baseApiUrl}}uploads/{{moment.image}}" alt="{{moment.title}}">
+            <h3>{{moment.title}}</h3>
+            <p class="date">Created at: {{moment.created_at}}</p>
+            <p>Comments: {{moment.comments!.length}}</p>
+            <p><a routerLink="moments/{{moment.id}}">Details</a></p>
         </div>
+
     </div>
 
     <ng-template #noMoments>

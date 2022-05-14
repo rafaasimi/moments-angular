@@ -65,7 +65,12 @@ export class MomentComponent implements OnInit {
   async removeHandler(id: number) {
     await this.momentService.removeMoment(id).subscribe();
     this.messagesService.add('Successfully deleted moment!');
-    this.router.navigate(['/']);
+    
+    new Promise((res) => {
+      setTimeout(() => {
+        this.router.navigate(['/'])
+      }, 1000);
+    })
   }
 
   async onSubmit(formDirective: FormGroupDirective) {

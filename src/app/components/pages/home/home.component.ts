@@ -36,7 +36,8 @@ export class HomeComponent implements OnInit {
 
   search(event:Event):void {
     const target = event.target as HTMLInputElement
-    const value = target.value
+    const value = target.value.toLowerCase()
+    
 
     this.filteredMoments = this.allMoments.filter(moment => {
       return moment.title.toLowerCase().includes(value)

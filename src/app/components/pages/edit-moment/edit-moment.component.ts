@@ -42,6 +42,10 @@ export class EditMomentComponent implements OnInit {
 
     this.messageService.add(`Moment "${momentData.title}" edited successfully!`)
     
-    this.router.navigate(['/'])
+    new Promise((res) => {
+      setTimeout(() => {
+        this.router.navigate(['/'])
+      }, 1000);
+    })
   }
 }
